@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore a curated collection of my latest projects showcasing my skills in development, and creativity. Discover my portfolio and let's collaborate on your next project.">
+    <meta name="keywords" content="portfolio, projects, design, development, creativity, web development, CSS, HTML, Tailwind, showcase, collaboration">
+    <meta name="author" content="Abhishek Haikerwal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/portfolio-filled-tool-svgrepo-com.svg">
+    <title>Portfolio</title>
+    <style>
+        *{
+            padding:0px;
+            margin: 0px;
+            box-sizing: border-box;
+            ::-webkit-scrollbar{
+                display: none;
+            }
+        }
+
+        .info{
+            height:50px ;
+            border-radius: 10px;
+            padding: 5px;
+            color: black;
+            background-color: rgba(44, 20, 20, 0.781);
+        }
+
+        .form{
+            text-align: center;
+        }
+
+        .message{
+            width: 100%;
+            border-radius: 10px;
+            color: black;
+            background-color: rgba(44, 20, 20, 0.781);
+        }
+
+        .linkFooter:hover{
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px white;
+        }
+
+        .linkweb{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            font-weight: 600;
+            font-size: 2rem;
+            background-color: rgba(255, 255, 255, 0.719);
+            opacity: 0;
+        }
+
+        .linkweb:hover{
+            opacity: 100;
+            border-radius: 20px;
+        }
+        .card{
+            min-height: 500px;
+            box-shadow: 0px 0px 10px black;
+            padding: 5px;
+        }
+        
+        .card:hover{
+            box-shadow: 0px 0px 10px white;
+        }
+
+        .progress{
+            position: relative;
+            width: 350px;
+            height: 10px;
+            background-color: rgb(82, 2, 2);
+            border-radius: 20px;
+        }
+
+
+        .bar{
+            position: absolute;
+            height: 10px;
+            border-radius: 20px;
+            background-color: rgb(252, 252, 227);
+            box-shadow: 0px 0px 10px rgb(212, 210, 210);
+            animation: move 2s ease-out forwards;
+        }
+
+        .pr1:hover{
+            box-shadow: 0px 0px 10px 2px rgb(190, 7, 7);
+        }
+
+        .pr2:hover{
+            box-shadow: 0px 0px 10px 2px rgb(7, 50, 190);
+        }
+
+        .pr3:hover{
+            box-shadow: 0px 0px 10px 2px rgb(27, 79, 190);
+        }
+
+        .pr4:hover{
+            box-shadow: 0px 0px 10px 2px rgb(190, 133, 27);
+        }
+
+        .pr5:hover{
+            box-shadow: 0px 0px 10px 2px rgb(190, 179, 27);
+        }
+
+        .pr6:hover{
+            box-shadow: 0px 0px 10px 2px rgb(27, 79, 190);
+        }
+
+        .bar1{
+            width: 315px; /*90%*/
+        }
+
+        .bar2{
+            width: 297.5px; /*85%*/
+        }
+
+        .bar3{
+            width: 280px; /*80%*/
+        }
+
+        .bar4{
+            width: 297.5px; /*85%*/
+        }
+
+        .bar5{
+            width: 315px; /*90%*/
+        }
+
+        .bar6{
+            width: 297.5px; /*85%*/
+        }
+
+        .radial-bars{
+            width:100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        .radial-bars .radial-bar{
+            width: 50%;
+            height: 170px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .radial-bars .radial-bar svg{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(-90deg);
+            width: 120px;
+            height: 100px;
+        }
+
+        .radial-bars .radial-bar .progress-bar{
+            stroke-width: 10;
+            stroke: black;
+            fill: transparent;
+            stroke-dasharray: 502;
+            stroke-dashoffset: 502;
+            stroke-linecap: round;
+            animation: animate-bar 1s linear forwards;
+        }
+
+        @keyframes animate-bar {
+            100%{
+                stroke-dashoffset: -1;
+            }
+        }
+        .path{
+            stroke-width: 10;
+            stroke: rgb(252, 252, 227);
+            filter: drop-shadow(0px 0px 10px rgb(161, 54, 54));
+            fill: transparent;
+            stroke-dasharray: 502;
+            stroke-dashoffset: 502;
+            stroke-linecap: round;
+        }
+
+        .path-1{
+            animation:animate-path1 1s 1s linear forwards;
+        }
+        .path-2{
+            animation:animate-path2 1s 1s linear forwards;
+        }
+        .path-3{
+            animation:animate-path3 1s 1s linear forwards;
+        }
+        .path-4{
+            animation:animate-path4 1s 1s linear forwards;
+        }
+
+        @keyframes animate-path1 {
+            100%{
+                stroke-dashoffset:50;
+            }
+
+        }
+
+        @keyframes animate-path2 {
+            100%{
+                stroke-dashoffset:175;
+            }
+
+        }
+
+        @keyframes animate-path3 {
+            100%{
+                stroke-dashoffset:125;
+            }
+
+        }
+
+        @keyframes animate-path4 {
+            100%{
+                stroke-dashoffset:75;
+            }
+
+        }
+
+        .radial-bar .percentage{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            font-weight: 500;
+            animation: showText 0.5 1s linear forwards;
+        }
+
+        .progress-bar .text{
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            font-weight: 500;
+            animation: showText 0.5 1s linear forwards;
+            opacity: 0;
+        }
+
+        .image{
+            border-radius: 20px;
+        }
+
+        .box {
+            display: grid;
+            height: inherit;
+            grid-template-columns: repeat(3, 400px);
+            gap: 5px;
+            margin: 0 auto;
+            justify-content: space-around;
+            align-items: center;
+            overflow-y: scroll;
+            position: relative; /* Add position relative */
+        }
+
+        .cardProject {
+            height: auto;
+            width: auto;
+            transition: transform 0.4s ease-in;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Initially hide overflow */
+            position: relative; /* Add position relative */
+            z-index: 1; /* Ensure the default stacking order */
+        }
+
+        .cardProject:hover {
+            overflow: visible; /* Show overflow on hover */
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 5px rgb(212, 212, 226);
+            transform: scale(1.05);
+            z-index: 2; /* Bring hovered element above its siblings */
+        }
+
+        .box:hover {
+            pointer-events: none;
+            overflow: scroll; /* Show overflow on hover */
+        }
+
+        .box:hover .cardProject {
+            pointer-events: auto;
+        }
+
+        @media (max-width:767px){
+            .link{
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width:425px){
+            .box{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+            .form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @media (max-width:768px){
+        
+        .cardProject{
+            width: 300px;
+        }
+        .progress{
+            width: 300px;
+        }
+
+        .bar1{
+            width: 270px; /*90%*/
+        }
+
+        .bar2{
+            width: 255px; /*85%*/
+        }
+
+        .bar3{
+            width: 240px; /*80%*/
+        }
+
+        .bar4{
+            width: 255px; /*85%*/
+        }
+
+        .bar5{
+            width: 270px; /*90%*/
+        }
+
+        .bar6{
+            width: 255px; /*85%*/
+        }
+
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        }
+
+        @keyframes move {
+        from{
+            width: 0%;
+        }
+        to{
+            inherits: ;
+        }
+        
+        }
+
+    </style>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-cover bg-center" style="background-image: url(./images/bg10.jpg);">
+    
+    <!-- nav bar -->
+    <nav class="fixed z-50 w-screen bg-black h-16 bg-opacity-90 shadow-md flex items-center justify-between text-white hover:[box-shadow:0px_0px_100px_rgba(255,255,255,0.3)]">
+        <div class="ml-5 flex items-center">
+            <a class="flex items-center w-auto" href="./index.html">
+                <div class="bg-white shadow-md border p-2 rounded-full hover:shadow-white">
+                    <img src="./images/portfolio-filled-tool-svgrepo-com.svg" alt="portfolio logo" width="20px">
+                </div>
+                <h1 class="ml-3 text-xl font-bold hover:[text-shadow:1px_1px_2px_var(--tw-shadow-color)] hover:text-slate-100">Portfolio.</h1>
+            </a>
+        </div>
+
+        <div class="w-20 h-10 flex rounded-full">
+            <label for="check" class="bg-gray-300 relative w-20 h-10 rounded-full cursor-pointer transition-colors duration-300 transform peer-checked:bg-slate-800">
+                <input type="checkbox" id="check" class="peer sr-only">
+                <span class="w-2/5 h-4/5 bg-slate-500 absolute rounded-full left-2 top-1 transition-transform duration-300 transform peer-checked:bg-slate-700 peer-checked:translate-x-9"></span>
+            </label>
+        </div>
+
+        <div class="menu sm:hidden mr-5 relative">
+            <div class="relative">
+                <img class="bg-white blur-md relative" src="./images/menu.svg" alt="menu button" width="30px">
+                <img class="absolute top-0 left-0 hover:bg-white hover:[box-shadow:0px_0px_50px_rgb(255,255,255)] hover:rounded-2xl bg-opacity-30" src="./images/menu.svg" alt="menu button" width="30px">
+            </div>
+        </div>
+        
+        <!-- for large screens -->
+        <div class="hidden sm:flex mr-5 space-x-5 h-16 items-center justify-center text-center">
+            <div class="relative py-2 flex justify-center items-center transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300">
+                <a class="absolute w-full py-2 left-0" href="#Home">Home</a>
+                <a class="relative w-full py-2 blur-md hover:bg-white hover:rounded-md hover:shadow-sm hover:shadow-slate-50 hover:font-bold" href="#Home">Home</a>
+            </div>
+            <div class="relative py-2 flex justify-center items-center transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300">
+                <a class="absolute w-full py-2 left-0" href="#About">About</a>
+                <a class="relative w-full py-2 blur-md hover:bg-white hover:rounded-md hover:shadow-sm hover:shadow-slate-50 hover:font-bold" href="#About">About</a>
+            </div>
+            <div class="relative py-2 flex justify-center items-center transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300">
+                <a class="absolute w-full py-2 left-0" href="#Services">Services</a>
+                <a class="relative w-full py-2 blur-md hover:bg-white hover:rounded-md hover:shadow-sm hover:shadow-slate-50 hover:font-bold" href="#Services">Services</a>
+            </div>
+            <div class="relative py-2 flex justify-center items-center transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300">
+                <a class="absolute w-full py-2 left-0" href="#Skills">Skills</a>
+                <a class="relative w-full py-2 blur-md hover:bg-white hover:rounded-md hover:shadow-sm hover:shadow-slate-50 hover:font-bold" href="#Skills">Skills</a>
+            </div>
+            <div class="relative py-2 flex justify-center items-center transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300">
+                <a class="absolute w-full py-2 left-0" href="#Projects">Projects</a>
+                <a class="relative w-full py-2 blur-md hover:bg-white hover:rounded-md hover:shadow-sm hover:shadow-slate-50 hover:font-bold" href="#Projects">Projects</a>
+            </div>
+            <div class="relative py-2 flex justify-center items-center transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300">
+                <a class="absolute w-full py-2 left-0" href="#Connect">Connect</a>
+                <a class="relative w-full py-2 blur-md hover:bg-white hover:rounded-md hover:shadow-sm hover:shadow-slate-50 hover:font-bold" href="#Connect">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- header -->
+    <header class="h-screen w-screen bg-cover bg-center overflow-hidden" id="Home">
+        <div class="relative top-60 flex justify-center box-border">
+            <div class="border-white top absolute bg-slate-100 bg-opacity-5 rounded-full w-[1500px] h-[1500px]"></div>
+            <div class="border-white top-24 absolute bg-slate-100 bg-opacity-5 rounded-full w-[1000px] h-[1000px]"></div>
+            <div class="top-52 absolute bg-slate-100 bg-opacity-5 rounded-full w-[500px] h-[500px]"></div>
+        </div>
+        <div class="w-screen h-screen overflow-hidden">
+            <!-- banner section -->
+            <div class="relative flex h-screen w-screen justify-center overflow-auto box-border">
+                <section class="container relative top-20 h-5/6 w-11/12 text-slate-200 rounded-2xl md:flex box-border">
+                    <div class="left px-10 my-auto text-center w-full md:w-2/3 lg:w-1/2 md:text-left">
+                        <p class="text-xl">Hello,<span class="text-blue-600"> I'm</span></p><br>
+                        <h1 class="font-bold text-3xl text-blue-600">Abhishek Haikerwal</h1>
+                        <p class="text-xl">FullStack Web Developer</p><br>
+                        <p class="md:w-11/12 mt-5 md:mt-0 text-balance">I am commited to finding innovative solutions and continuously experimenting to help my clients achieve their goals.</p><br>
+                        <button class="p-3 w-28 h-12 shadow-sky-800 shadow-md rounded-md bg-blue-800 hover:bg-blue-600 font-bold">Resume</button><br><br>
+
+                        <!-- social buttons -->
+                        <div class="md:flex">
+                            <p class="font-bold">Check out My:&nbsp;</p>
+                            <div class="justify-center items-center md:flex md:justify-start lg:gap-0 text-black">
+                                <!-- <a href="mailto:abhishek484@gmail.com" target="_blank"><img src="./images/gmail.svg" height="20px" alt="gmail logo">&nbsp;Gmail</a>&nbsp;&nbsp; -->
+                                <a class="link mx-auto sm:mx-0 flex w-32 items-center rounded-full bg-opacity-80 hover:bg-opacity-90 hover:shadow-[0px_0px_10px_rgb(255,255,255)] bg-white px-2" href="https://www.linkedin.com/in/abhishek-haikerwal-a827781a0/" target="_blank"><img src="./images/linkedin.svg" width="30px" alt="gmail logo">&nbsp;LinkedIn</a>&nbsp;
+                                <a class="link mx-auto sm:mx-0 flex w-32 items-center rounded-full bg-opacity-80 hover:bg-opacity-90 hover:shadow-[0px_0px_10px_rgb(255,255,255)] bg-white px-2" href="https://www.hackerrank.com/profile/abhihaikerwal37" target="_blank"><img src="./images/hackerrank.svg" width="30px" alt="gmail logo">&nbsp;HackerRank</a>&nbsp;
+                                <a class="link mx-auto sm:mx-0 flex w-32 items-center rounded-full bg-opacity-80 hover:bg-opacity-90 hover:shadow-[0px_0px_10px_rgb(255,255,255)] bg-white px-2" href="https://github.com/haikerwalabhishek" target="_blank"><img src="./images/github.svg" width="30px" alt="gmail logo">&nbsp;GitHub</a>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="right flex justify-center items-center w-full md:w-1/3 lg:w-1/2 box-border">
+                        <div class="group relative w-72 rounded-full">
+                            <img class="rounded-full bg-white bg-opacity-30 transition-opacity duration-300 opacity-100 group-hover:opacity-0 shadow-[0px_0px_100px_rgba(0,0,0,0.5)] border-2" src="./images/abhishekWithoutbg.png" alt="abhishek anime image" width="300px">
+                            <img class="absolute top-0 left-0 rounded-full bg-opacity-30 bg-white transition-opacity duration-300 opacity-0 group-hover:opacity-100 hover:shadow-[0px_0px_100px_rgba(255,182,193,0.5)] hover:border-2" src="./images/abhic.png" alt="abhishek anime image" width="300px">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- About -->
+    <section class="h-screen w-screen bg-cover bg-center overflow-hidden" id="About">
+        <div class="relative top-60 flex justify-center box-border">
+            <div class="border-white top absolute bg-slate-100 bg-opacity-5 rounded-full w-[1500px] h-[1500px]"></div>
+            <div class="border-white top-24 absolute bg-slate-100 bg-opacity-5 rounded-full w-[1000px] h-[1000px]"></div>
+            <div class="top-52 absolute bg-slate-100 bg-opacity-5 rounded-full w-[500px] h-[500px]"></div>
+        </div>
+        <div class="w-screen h-screen overflow-hidden">
+            <!-- banner section -->
+            <div class="relative flex h-screen w-screen justify-center overflow-auto box-border">
+                <section class="container relative top-20 h-5/6 w-11/12 text-slate-200 rounded-2xl md:flex box-border">
+                    <div class="right flex justify-center items-center w-full md:w-1/3 lg:w-1/2 box-border">
+                        <div class="group relative w-72 rounded-md">
+                            <img class="rounded-md bg-white bg-opacity-30 transition-opacity duration-300 opacity-100 group-hover:opacity-0 shadow-[0px_0px_100px_rgba(0,0,0,0.5)] border-2" src="./images/abhc.png" alt="abhishek anime image" width="300px">
+                            <img class="absolute top-0 left-0 rounded-md bg-opacity-30 bg-white transition-opacity duration-300 opacity-0 group-hover:opacity-100 hover:shadow-[0px_0px_100px_rgba(255,182,193,0.5)] hover:border-2" src="./images/abh.jpg" alt="abhishek anime image" width="300px">
+                        </div>
+                    </div>
+                    <div class="left px-10 my-auto text-center w-full md:w-2/3 lg:w-1/2 md:text-left">
+                        <h1 class="font-bold text-3xl text-blue-600">About Me</h1><hr><br>
+                        <h1 class="font-bold text-2xl text-blue-400">Education:</h1>
+                        <p class="text-xl">currently pursuing MBA at amity university online and Fullstack Web Developer Course at internshala</p><br>
+                        <p class="md:w-11/12 mt-5 md:mt-0 text-balance">PG Certification in Data Science</p>
+                        <p class="md:w-11/12 mt-5 md:mt-0 text-balance">Graduated at RBS Eng. technical campus</p><br>
+                        <h1 class="font-bold text-2xl text-blue-400">experiences:</h1>
+                        <p class="md:w-11/12 mt-5 md:mt-0 text-balance">Did 6 month virtual internship at Snva lic</p><br>
+                        <h1 class="font-bold text-2xl text-blue-400">Hobbies:</h1>
+                        <p class="md:w-11/12 mt-5 md:mt-0 text-balance">Love making websites</p>
+                        <p class="md:w-11/12 mt-5 md:mt-0 text-balance">Love Music</p>
+                        <p class="md:w-11/12 mt-5 md:mt-0 text-balance">Love reading</p><br>
+                    </div>
+                    <br>
+                </section>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services -->
+    <section class="h-screen w-screen bg-cover bg-center overflow-hidden" id="Services">
+        <div class="relative top-60 flex justify-center box-border">
+            <div class="border-white top  absolute bg-slate-100 bg-opacity-5 rounded-full w-[1500px] h-[1500px]"></div>
+            <div class="border-white top-24  absolute bg-slate-100 bg-opacity-5 rounded-full w-[1000px] h-[1000px]"></div>
+            <div class="top-52 absolute bg-slate-100 bg-opacity-5 rounded-full w-[500px] h-[500px]"></div>
+        </div>
+        <div class="w-screen h-screen overflow-hidden">
+            <!-- banner section -->
+            <div class="relative flex h-screen w-screen justify-center overflow-auto box-border">
+            <section class="containerCard relative top-20 h-5/6 w-11/12 text-slate-200  rounded-2xl box-border">
+                <h1 class="text-center font-bold text-3xl text-white">Our Services</h1><br><hr><br>
+                <div class="md:flex">
+                    <div class="leftCard p-5 flex justify-center items-center w-full md:w-1/3 lg:w-1/2 box-border">
+                        <div class="card flex-col bg-white bg-opacity-50 text-center rounded-xl hover:shadow-2xl transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300">
+                            <img class="mx-auto" src="./images/code.svg" alt="coding icon" width="50px"><br><hr class="bg-black"><br>
+                            <h1 class="font-bold text-xl text-black">Web Development</h1><br>
+                            <p class="text-black text-lg">Proficient in HTML, CSS, and Tailwind CSS, I excel in web development. With strong JavaScript skills, I create dynamic and engaging web experiences. My focus on clean code and responsive design ensures high-quality results. Passionate about staying updated, I deliver modern and user-friendly websites.</p><br><br>
+                            <button class="p-3 w-28 h-12 shadow-sky-800 shadow-md rounded-md bg-blue-800 hover:bg-blue-600 font-bold">Read More</button><br>
+                        </div>
+                    </div>
+    
+                    <div class="leftCard p-5 flex justify-center items-center w-full md:w-1/3 lg:w-1/2 box-border">
+                        <div class="card flex-col bg-white bg-opacity-50 text-center rounded-xl hover:shadow-2xl transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300">
+                            <img class="mx-auto" src="./images/paint.svg" alt="coding icon" width="50px"><br><hr class="bg-black"><br>
+                            <h1 class="font-bold text-xl text-black">Web Design</h1><br>
+                            <p class="text-black text-lg">In web design, I blend aesthetics with functionality for captivating user experiences. With an eye for detail and a focus on usability, I craft visually stunning layouts. My expertise lies in creating intuitive navigation and impactful visual elements. I strive to deliver designs that resonate with users and drive engagement.</p><br><br>
+                            <button class="p-3 w-28 h-12 shadow-sky-800 shadow-md rounded-md bg-blue-800 hover:bg-blue-600 font-bold">Read More</button><br>
+                        </div>
+                    </div>
+    
+                    <div class="leftCard p-5 flex justify-center items-center w-full md:w-1/3 lg:w-1/2 box-border">
+                        <div class="card flex-col bg-white bg-opacity-50 text-center rounded-xl transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300">
+                            <img class="mx-auto" src="./images/database.svg" alt="coding icon" width="50px"><br><hr class="bg-black"><br>
+                            <h1 class="font-bold text-xl text-black">Data Base</h1><br>
+                            <p class="text-black text-lg">
+                                Proficient in SQL, MongoDB, and PostgreSQL, I manage databases with precision. My expertise extends to designing efficient database structures and optimizing queries. Whether relational or NoSQL, I ensure data integrity and scalability. Through strategic indexing and normalization, I enhance performance and reliability.</p><br><br>
+                                <button class="p-3 w-28 h-12 shadow-sky-800 shadow-md rounded-md bg-blue-800 hover:bg-blue-600 font-bold">Read More</button><br>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills -->
+    <section class="h-screen w-screen bg-cover bg-center overflow-hidden" id="Skills">
+        <div class="relative top-60 flex justify-center box-border">
+            <div class="absolute top-0 bg-slate-100 bg-opacity-5 rounded-full w-[1500px] h-[1500px]"></div>
+            <div class="absolute top-24 bg-slate-100 bg-opacity-5 rounded-full w-[1000px] h-[1000px]"></div>
+            <div class="absolute top-52 bg-slate-100 bg-opacity-5 rounded-full w-[500px] h-[500px]"></div>
+        </div>
+        <div class="w-screen h-screen overflow-hidden">
+            <!-- banner section -->
+            <div class="relative flex h-screen w-screen justify-center overflow-auto">
+                <section class="container relative top-20 h-5/6 w-11/12 text-slate-200 rounded-2xl md:flex box-border">
+                    <div class="left flex justify-center items-center w-full md:w-1/2">
+                        <div class=" bg-white rounded-xl bg-opacity-50 p-5 card transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-102 transition ease-in-out duration-300 hover:shadow-2xl">
+                            <h1 class="text-center font-bold text-3xl text-black">Technical Skills</h1><br><hr><br>
+                            <div class="flex justify-between"><h2 class="flex items-center font-bold text-black"><img src="./images/html.svg" alt="HTML icon" width="20px" class="mr-2">HTML</h2><h2>90%</h2></div>
+                            <div class="progress pr1"><div class="bar bar1"></div></div><br>                
+                            <div class="flex justify-between"><h2 class="flex items-center font-bold text-black"><img src="./images/css.svg" alt="HTML icon" width="20px" class="mr-2">CSS</h2><h2>85%</h2></div>
+                            <div class="progress pr2"><div class="bar2 bar"></div></div><br>   
+                            <div class="flex justify-between"><h2 class="flex items-center font-bold text-black"><img src="./images/tailwind.svg" alt="HTML icon" width="20px" class="mr-2">Tailwind</h2><h2>80%</h2></div>
+                            <div class="progress pr3"><div class="bar3 bar"></div></div><br>   
+                            <div class="flex justify-between"><h2 class="flex items-center font-bold text-black"><img src="./images/js.svg" alt="HTML icon" width="20px" class="mr-2">JS</h2><h2>85%</h2></div>
+                            <div class="progress pr4"><div class="bar4 bar"></div></div><br>   
+                            <div class="flex justify-between"><h2 class="flex items-center font-bold text-black"><img src="./images/python.svg" alt="HTML icon" width="20px" class="mr-2">Python</h2><h2>90%</h2></div>
+                            <div class="progress pr5"><div class="bar5 bar"></div></div><br>   
+                            <div class="flex justify-between"><h2 class="flex items-center font-bold text-black"><img src="./images/sql.svg" alt="HTML icon" width="20px" class="mr-2">SQL</h2><h2>85%</h2></div>
+                            <div class="progress pr6"><div class="bar6 bar"></div></div><br>   
+                        </div>
+                    </div>
+                    <div class="right w-full md:w-1/2 box-border">
+                            <h1 class="text-center font-bold text-3xl text-white">Professional Skills</h1><br><hr><br>
+                             <div class="radial-bars">
+                                <div class="radial-bar">
+                                    <svg x="0px" y="opx" viewbox="0 0 200 200">
+                                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                                    </svg>
+                                    <div class="percentage">90%</div>
+                                    <div class="text">Creativity</div>
+                                </div>
+                                <div class="radial-bar">
+                                    <svg x="0px" y="opx" viewbox="0 0 200 200">
+                                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                                    </svg>
+                                    <div class="percentage">85%</div>
+                                    <div class="text">Team Work</div>
+                                </div>
+                                <div class="radial-bar">
+                                    <svg x="0px" y="opx" viewbox="0 0 200 200">
+                                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                                    </svg>
+                                    <div class="percentage">70%</div>
+                                    <div class="text">Problem Solving</div>
+                                </div>
+                                <div class="radial-bar">
+                                    <svg x="0px" y="opx" viewbox="0 0 200 200">
+                                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                                    </svg>
+                                    <div class="percentage">75%</div>
+                                    <div class="text">Communication</div>
+                                </div>
+                             </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- projects -->
+    <section class="h-screen w-screen bg-cover bg-center overflow-hidden flex justify-center items-center" id="Projects">
+        <div class="w-11/12 h-5/6">
+            <h1 class="text-center font-bold text-3xl text-white">My Projects</h1><br><hr><br><br><br>
+            <div class="box">
+                <div class="cardProject relative">
+                    <img class="image" src="https://raw.githubusercontent.com/haikerwalabhishek/My-Top-Flix/main/preview1.png" alt="top flix preview" >
+                    <a class="linkweb" href="https://haikerwalabhishek.github.io/My-Top-Flix/"><img src="./images/link.svg" alt="link" width="50px">Visit</a>
+                </div>
+                <div class="cardProject relative">
+                    <img class="image" src="https://raw.githubusercontent.com/haikerwalabhishek/Website-Homepage-using-Bootstrap-Examples-section/main/bootstrap.png" alt="bootstrap preview">
+                    <a class="linkweb" href="https://haikerwalabhishek.github.io/Website-Homepage-using-Bootstrap-Examples-section/"><img src="../images/link.svg" alt="link" width="50px">Visit</a>
+                </div>
+                <div class="cardProject relative">
+                    <img class="image" src="https://raw.githubusercontent.com/haikerwalabhishek/web-design-agency/main/website%20dev.png" alt="agency preview">
+                    <a class="linkweb" href="https://haikerwalabhishek.github.io/web-design-agency/"><img src="./images/link.svg" alt="link" width="50px">Visit</a>
+                </div>
+                <div class="cardProject relative">
+                    <img class="image" src="https://raw.githubusercontent.com/haikerwalabhishek/-Elevate-Your-Business-with-Our-Pricing-Plans/main/pricing.png" alt="pricing card preview">
+                    <a class="linkweb" href="https://haikerwalabhishek.github.io/-Elevate-Your-Business-with-Our-Pricing-Plans/"><img src="./images/link.svg" alt="link" width="50px">Visit</a>
+                </div>
+                <div class="cardProject relative">
+                    <img class="image" src="https://raw.githubusercontent.com/haikerwalabhishek/HTML-BLOG/main/preview.png" alt="html preview">
+                    <a class="linkweb" href="https://haikerwalabhishek.github.io/HTML-BLOG/"><img src="./images/link.svg" alt="link" width="50px">Visit</a>
+                </div>
+                <div class="cardProject relative">
+                    <img class="image" src="https://raw.githubusercontent.com/haikerwalabhishek/CSS-Card/main/card.png" alt="card preview">
+                    <a class="linkweb" href="https://haikerwalabhishek.github.io/CSS-Card/"><img src="./images/link.svg" alt="link" width="50px">Visit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="h-screen w-screen bg-cover bg-center overflow-hidden" id="Connect">
+        <div class="relative top-60 flex justify-center box-border">
+            <div class="border-white top  absolute bg-slate-100 bg-opacity-5 rounded-full w-[1500px] h-[1500px]"></div>
+            <div class="border-white top-24  absolute bg-slate-100 bg-opacity-5 rounded-full w-[1000px] h-[1000px]"></div>
+            <div class="top-52 absolute bg-slate-100 bg-opacity-5 rounded-full w-[500px] h-[500px]"></div>
+        </div>
+        <div class="w-screen h-screen overflow-hidden">
+            <!-- banner section -->
+            <div class="relative flex h-screen w-screen justify-center overflow-auto box-border">
+                <section class="containerCont relative top-20 h-5/6 w-11/12 text-slate-200  rounded-2xl box-border">
+                    <h1 class="text-center font-bold text-3xl text-white">Contact <span class="text-blue-600">Me</span></h1><br><hr><br>
+                    <div class="flex justify-center">
+                            <form action="#" method="post" class="form">
+                                        <input class="first info" type="text" placeholder="First Name" name="first">&nbsp;
+                                        <input class="last info" type="text" placeholder="Last Name" name="last"><br><br>
+                                        <input class="email info" type="email" placeholder="Email" name="email">&nbsp;
+                                        <input class="phone info" type="tel" placeholder="Mobile Number" name="phone"><br><br>
+                                        <textarea class="message" name="message" placeholder="Write Your Query..." cols="30" rows="5"></textarea><br><br>
+                                        <button class="send p-3 w-28 h-12 shadow-sky-800 shadow-md rounded-md bg-blue-800 hover:bg-blue-600 font-bold">Send</button><br>
+                            </form>      
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="w-screen bg-black h-16 bg-opacity-90 shadow-md flex items-center justify-around text-white hover:[box-shadow:0px_0px_100px_rgba(255,255,255,0.3)]">
+        <div>
+            <h1 class="font-bold">@Copyright2024</h1><hr>
+            <h2 class="font-semibold">Abhishek Haikerwal</h2>
+        </div>
+        <div class="flex space-x-5">
+            <a class="linkFooter" href="tel:+919119045548"><img src="./images/whatsapp.svg" alt="whatsapp logo" width="30px"></a>
+            <a class="linkFooter" href="mailto:abhihaikerwal98@gmail.com"><img src="./images/mail.svg" alt="whatsapp logo" width="30px"></a>
+        </div>
+    </footer>
+   
+    
+
+
+
+</body>
+</html>
