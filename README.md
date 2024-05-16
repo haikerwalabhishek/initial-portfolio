@@ -16,7 +16,7 @@ This project serves as a practical exercise for learning full-stack web developm
 
 
 
-<img src="https://raw.githubusercontent.com/haikerwalabhishek/initial-portfolio/main/preview2.png" height=200px width=300px>
-<img src="https://raw.githubusercontent.com/haikerwalabhishek/initial-portfolio/main/preview1.png" height=200px width=300px>
-<img src="https://raw.githubusercontent.com/haikerwalabhishek/initial-portfolio/main/preview3.png" height=200px width=300px>
+<center><img src="https://raw.githubusercontent.com/haikerwalabhishek/initial-portfolio/main/preview2.png" height=200px width=400px></center>
+<center><img src="https://raw.githubusercontent.com/haikerwalabhishek/initial-portfolio/main/preview1.png" height=200px width=400px></center>
+<center><img src="https://raw.githubusercontent.com/haikerwalabhishek/initial-portfolio/main/preview3.png" height=200px width=400px></center>
 
