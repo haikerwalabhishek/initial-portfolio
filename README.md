@@ -10,7 +10,7 @@ This project serves as a practical exercise for learning full-stack web developm
 ## Link:
 
 
-[https://haikerwalabhishek.github.io/initial-portfolio](https://haikerwalabhishek.github.io/initial-portfolio/)
+[Click Here](https://haikerwalabhishek.github.io/initial-portfolio/)
 
 ## Preview:
 
